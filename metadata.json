@@ -1,0 +1,7 @@
+{
+  "name": "NailsDone: Y2K Nail Art Extravaganza",
+  "description": "A hyper-feminine, Y2K-inspired nail art platform that lets you generate dream manicures and find the perfect glitzy designs using Gemini AI.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
