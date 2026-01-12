@@ -12,9 +12,15 @@ const Generator: React.FC = () => {
   const handleGenerate = async (fantasy: ManiFantasy) => {
     setLoading(true);
     setActiveFantasy(fantasy);
-    const result = await generateNailArtImage(fantasy);
-    setGeneratedImage(result);
-    setLoading(false);
+    try {
+      const result = await generateNailArtImage(fantasy);
+      setGeneratedImage(result);
+    } catch (error) {
+      console.error("Failed to generate image:", error);
+      setGeneratedImage(null);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
